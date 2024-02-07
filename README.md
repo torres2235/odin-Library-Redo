@@ -1,2 +1,4 @@
 # odin-Library-Redo
-This is my redone attempt at The Odin Project Library assignment
+This is my Library Project.
+
+Based around curriculum from the Odin Project. https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/library
