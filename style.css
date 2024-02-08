@@ -1,0 +1,30 @@
+html, body {
+    margin: 0px;
+    background-color: #eff6ff;
+    color: #eff6ff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    background-color: #172554;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 200px);
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 15px;
+}
+
+.card {
+    background-color: #172554;
+    border-radius: 10px;
+}
