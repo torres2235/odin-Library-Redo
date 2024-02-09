@@ -13,8 +13,13 @@ html, body {
 header {
     background-color: #172554;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 30px;
+}
+
+header button {
+    align-self: flex-end;
 }
 
 main {
