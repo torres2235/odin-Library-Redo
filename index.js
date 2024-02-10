@@ -39,16 +39,20 @@ function addBookToLibrary(title, author, pages, read) {
   cRead.classList.add("read");
   if(read) {
     cRead.innerText = "Read";
+    cRead.style.background = "#15803d";
   } else {
     cRead.innerText = "Not Read";
+    cRead.style.background = "#ca8a04";
   }
   card.appendChild(cRead);
   cRead.addEventListener('click', () => {
     read = !read;
     if(read) {
         cRead.innerText = "Read";
+        cRead.style.background = "#15803d";
     } else {
         cRead.innerText = "Not Read";
+        cRead.style.background = "#ca8a04";
     }
   });
 
