@@ -36,24 +36,34 @@ function addBookToLibrary(title, author, pages, read) {
   card.appendChild(cPages);
 
   const cRead = document.createElement("button");
-  if(read == true) {
-    cRead.classList.add("read");
+  cRead.classList.add("read");
+  if(read) {
     cRead.innerText = "Read";
   } else {
-    cRead.classList.add("notRead");
     cRead.innerText = "Not Read";
   }
   card.appendChild(cRead);
+  cRead.addEventListener('click', () => {
+    read = !read;
+    if(read) {
+        cRead.innerText = "Read";
+    } else {
+        cRead.innerText = "Not Read";
+    }
+  });
 
   const del = document.createElement("button");
-  del.setAttribute('id','del');
+  del.classList.add("del")
   del.innerText = 'X';
   card.appendChild(del);
+  del.addEventListener('click', () => {
+    card.remove();
+  });
 }
 
 const btn = document.querySelector('#btn');
 btn.addEventListener('click', () => {
-  alert("Hello World");
+  alert("new book");
 });
 
 //initial book to start our list           

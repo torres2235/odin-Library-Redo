@@ -1,6 +1,6 @@
 html, body {
     margin: 0px;
-    background-color: #eff6ff;
+    background-color: #bfdbfe;
     color: #eff6ff;
 
     display: flex;
@@ -51,7 +51,7 @@ main {
     align-items: center;
 }
 
-#del {
+.del {
     height: 25px;
     width: 25px;
 
@@ -60,10 +60,10 @@ main {
     border-radius: 100%;
 
     color: #eff6ff;
+
+    align-self: flex-end;
 }
 
 #del:hover {
     background-color: #9f1239;
-
-    align-self: flex-end;
 }
