@@ -65,6 +65,25 @@ function addBookToLibrary(title, author, pages, read) {
   });
 }
 
+const submit = document.getElementById('submit');
+submit.addEventListener('click', () => {
+    event.preventDefault();
+    const title = document.getElementById('title');
+    const author = document.getElementById('author');
+    const pages = document.getElementById('pages');
+    const check = document.getElementById('check').checked;
+
+    if(title.value && author.value && pages.value) {
+        addBookToLibrary(title.value, author.value, pages.value, check);
+        title.value='';
+        author.value='';
+        pages.value='';
+        closeModal(modal);
+    }
+    
+    console.log('hello');
+});
+
 // Below is for the modal that you input book info
 const openModalButton = document.querySelectorAll('[data-modal-target]');
 const closeModalButton = document.querySelectorAll('[data-close-button]');
@@ -78,7 +97,7 @@ openModalButton.forEach(button => {
 })
 
 overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.modal.ative');
+    const modals = document.querySelectorAll('.modal.active');
     modals.forEach(modal => {
         closeModal(modal);
     })
