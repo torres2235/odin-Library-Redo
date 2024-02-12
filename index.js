@@ -58,17 +58,56 @@ function addBookToLibrary(title, author, pages, read) {
 
   const del = document.createElement("button");
   del.classList.add("del")
-  del.innerText = 'X';
+  del.innerHTML = '&times;';
   card.appendChild(del);
   del.addEventListener('click', () => {
     card.remove();
   });
 }
 
-const btn = document.querySelector('#btn');
-btn.addEventListener('click', () => {
-  alert("new book");
-});
+// Below is for the modal that you input book info
+const openModalButton = document.querySelectorAll('[data-modal-target]');
+const closeModalButton = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById("overlay");
+
+openModalButton.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalTarget);
+        openModal(modal);
+    })
+})
+
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.ative');
+    modals.forEach(modal => {
+        closeModal(modal);
+    })
+})
+
+closeModalButton.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        closeModal(modal);
+    })
+})
+
+function openModal(modal) {
+    if(modal == null) {
+        return;
+    } else {
+        modal.classList.add('active');
+        overlay.classList.add('active');
+    }
+}
+
+function closeModal(modal) {
+    if(modal == null) {
+        return;
+    } else {
+        modal.classList.remove('active');
+        overlay.classList.remove('active');
+    }
+}
 
 //initial book to start our list           
 addBookToLibrary('The Hobbit', 'J.R.R Tolkien', 295, false);

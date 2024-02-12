@@ -16,9 +16,27 @@
 <body>
     <header>
         <h1>My Library</h1>
-        <button id="btn">New Book</button>
+        <button data-modal-target="#modal" id="btn">New Book</button>
     </header>
-    
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="modal-title">New Book</div>
+            <button data-close-button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            A ipsam molestiae quibusdam necessitatibus mollitia eum 
+            quisquam id natus nobis minima ipsa possimus nesciunt dicta 
+            pariatur illum, quas consequuntur odio voluptate. Culpa ut 
+            quisquam impedit accusantium doloremque cumque, architecto 
+            in possimus id dignissimos laudantium natus fuga sit, atque 
+            hic officiis inventore odio? Deleniti natus autem ad, repellat 
+            numquam, consequuntur possimus voluptatum ducimus nisi at 
+            nobis ut neque assumenda doloremque hic itaque aut illum rem 
+            pariatur facilis iusto quas perferendis aliquam nemo?
+        </div>
+    </div>
+    <div id="overlay"></div>
     <main></main>
 </body>
 </html>
